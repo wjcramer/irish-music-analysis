@@ -74,10 +74,9 @@ def find_nearest_tunes(df, target_name, popular_only=False, n=5):
 
 
 # ---------- UMAP Plot (always visible) ----------
-# ---------- Base scatter points ----------
 fig = go.Figure()
 
-# Plot all points, color by mode
+# Base scatter plot (all tunes except selected one)
 for mode in df["mode"].unique():
     subset = df[(df["mode"] == mode) & (df["name"] != selected_tune)]
     fig.add_trace(go.Scatter(
@@ -90,15 +89,19 @@ for mode in df["mode"].unique():
         hoverinfo="text"
     ))
 
-fig.add_trace(go.Scatter(
-    x=selected_row["x"],
-    y=selected_row["y"],
-    mode="markers",
-    marker=dict(size=14, color="black", symbol="x"),
-    name=selected_tune,  # adds it to legend
-    showlegend=True,
-    hoverinfo="skip"  # optional: avoid extra tooltip
-))
+# ---------- Add selected tune as black X if selected ----------
+if selected_tune:
+    selected_row = df[df["name"] == selected_tune]
+    if not selected_row.empty:
+        fig.add_trace(go.Scatter(
+            x=selected_row["x"],
+            y=selected_row["y"],
+            mode="markers",
+            marker=dict(size=14, color="black", symbol="x"),
+            name=selected_tune,
+            showlegend=True,
+            hoverinfo="skip"
+        ))
 
 # ---------- Layout ----------
 fig.update_layout(
@@ -106,10 +109,12 @@ fig.update_layout(
     xaxis_title="x",
     yaxis_title="y",
     legend_title="Mode",
-    margin=dict(l=20, r=20, t=40, b=20)
+    margin=dict(l=20, r=20, t=40, b=20),
+    legend_traceorder="normal"  # or "reversed" if you want selected on top
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
 
 # Only show nearest tunes table *after* tune is selected
 if selected_tune:

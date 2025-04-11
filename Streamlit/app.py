@@ -3,14 +3,20 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import euclidean_distances
 import plotly.express as px
+import re
 
 # ---------- Load Data ----------
 @st.cache_data
 def load_data():
     df = pd.read_csv("umap_tunes.csv")
-    # Convert pitch histograms from strings to lists
-    df["pitch_histogram"] = df["pitch_histogram"].apply(eval)
+
+    # Safely parse pitch_histogram strings into lists of floats
+    def parse_vector_string(s):
+        return [float(x) for x in re.findall(r"[-+]?\d*\.\d+|\d+", str(s))]
+
+    df["pitch_histogram"] = df["pitch_histogram"].apply(parse_vector_string)
     return df
+
 
 df = load_data()
 

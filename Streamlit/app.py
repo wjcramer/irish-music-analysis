@@ -15,6 +15,9 @@ def load_data():
         return [float(x) for x in re.findall(r"[-+]?\d*\.\d+|\d+", str(s))]
 
     df["pitch_histogram"] = df["pitch_histogram"].apply(parse_vector_string)
+    
+    df = df[df["pitch_histogram"].apply(lambda x: isinstance(x, list) and len(x) == 12)].copy()
+
     return df
 
 

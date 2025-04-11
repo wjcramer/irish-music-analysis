@@ -49,7 +49,7 @@ selected_tune = st.selectbox(
 )
 
 # ---------- Popularity check box ----------
-popular_only = st.checkbox("🔍 Only include more popular tunes (≥ 15 tunebooks)", value=False)
+popular_only = st.checkbox("🔍 Only include more popular tunes (added to ≥ 15 tunebooks)", value=False)
 
 
 # ---------- Nearest Neighbors ----------
@@ -73,22 +73,17 @@ def find_nearest_tunes(df, target_name, popular_only=False, n=5):
     return result[["name", "mode", "type", "tunebooks", "distance"]]
 
 
-# ---------- Only proceed if user has selected a tune ----------
+# ---------- UMAP Plot (always visible) ----------
+fig = px.scatter(
+    df, x="x", y="y", color="mode", hover_data=["name", "type"],
+    title="UMAP of Irish Tune Pitch Histograms", opacity=0.5
+)
+
+# Shrink the main cloud
+fig.data[0].marker.size = 5
+
+# If a tune is selected, highlight it
 if selected_tune:
-
-    # ---------- Nearest Neighbors ----------
-    nearest_df = find_nearest_tunes(df, selected_tune, popular_only=popular_only)
-
-    # ---------- UMAP Plot ----------
-    fig = px.scatter(
-        df, x="x", y="y", color="mode", hover_data=["name", "type"],
-        title="UMAP of Irish Tune Pitch Histograms", opacity=0.5
-    )
-
-    # Shrink only the main point cloud
-    fig.data[0].marker.size = 5
-
-    # Highlight the selected tune
     selected_row = df[df["name"] == selected_tune]
     if not selected_row.empty:
         fig.add_trace(go.Scatter(
@@ -102,9 +97,13 @@ if selected_tune:
             showlegend=False
         ))
 
-    st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True)
 
-    # ---------- Nearest Tunes Table ----------
+# Only show nearest tunes table *after* tune is selected
+if selected_tune:
+    nearest_df = find_nearest_tunes(df, selected_tune, popular_only=popular_only)
+
+    # Rename columns for better display
     nearest_df = nearest_df.rename(columns={
         "tunebooks": "Popularity (tunebooks)",
         "distance": "Degree of similarity (smaller is more similar)"

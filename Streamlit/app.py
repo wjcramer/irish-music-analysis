@@ -48,11 +48,6 @@ selected_tune = st.selectbox(
     placeholder="Start typing a tune name..."
 )
 
-if selected_tune:
-    nearest_df = find_nearest_tunes(df, selected_tune, popular_only=popular_only)
-    # [plotting code]
-    # [nearest tunes table]
-
 # ---------- Popularity check box ----------
 popular_only = st.checkbox("🔍 Only include more popular tunes (≥ 15 tunebooks)", value=False)
 

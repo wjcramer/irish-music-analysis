@@ -79,14 +79,14 @@ fig = go.Figure()
 
 # Plot all points, color by mode
 for mode in df["mode"].unique():
-    subset = df[df["mode"] == mode]
+    subset = df[(df["mode"] == mode) & (df["name"] != selected_tune)]
     fig.add_trace(go.Scatter(
         x=subset["x"],
         y=subset["y"],
         mode="markers",
         name=mode,
         marker=dict(size=5, opacity=0.5),
-        text=subset["name"],  # hover info
+        text=subset["name"],
         hoverinfo="text"
     ))
 

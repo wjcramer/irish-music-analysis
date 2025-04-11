@@ -38,11 +38,20 @@ df = load_data()
 
 # ---------- Search Bar ----------
 tune_names = sorted(df["name"].unique())
+
+st.markdown("🎻 **Search for a tune by name**")
+
 selected_tune = st.selectbox(
-    "Search for a tune (start typing to filter):",
-    options=tune_names,
-    placeholder="Type a tune name, e.g. 'The Silver Spear'"
+    "",
+    options=[""] + sorted(df["name"].unique()),  # prepend empty option
+    index=0,
+    placeholder="Start typing a tune name..."
 )
+
+if selected_tune:
+    nearest_df = find_nearest_tunes(df, selected_tune, popular_only=popular_only)
+    # [plotting code]
+    # [nearest tunes table]
 
 # ---------- Popularity check box ----------
 popular_only = st.checkbox("🔍 Only include more popular tunes (≥ 15 tunebooks)", value=False)
@@ -69,41 +78,43 @@ def find_nearest_tunes(df, target_name, popular_only=False, n=5):
     return result[["name", "mode", "type", "tunebooks", "distance"]]
 
 
-nearest_df = find_nearest_tunes(df, selected_tune, popular_only=popular_only)
+# ---------- Only proceed if user has selected a tune ----------
+if selected_tune:
 
-# ---------- Plot ----------
-fig = px.scatter(
-    df, x="x", y="y", color="mode", hover_data=["name", "type"],
-    title="UMAP of Irish Tune Pitch Histograms", opacity=0.5
-)
+    # ---------- Nearest Neighbors ----------
+    nearest_df = find_nearest_tunes(df, selected_tune, popular_only=popular_only)
 
-# Shrink default points
-fig.update_traces(marker=dict(size=5), selector=dict(mode='markers'))
+    # ---------- UMAP Plot ----------
+    fig = px.scatter(
+        df, x="x", y="y", color="mode", hover_data=["name", "type"],
+        title="UMAP of Irish Tune Pitch Histograms", opacity=0.5
+    )
 
-# Highlight selected tune — add this as a new trace *after* the main one
-selected_row = df[df["name"] == selected_tune]
-if not selected_row.empty:
-    fig.add_trace(go.Scatter(
-        x=selected_row["x"],
-        y=selected_row["y"],
-        mode="markers+text",
-        marker=dict(size=14, color="black", symbol="x"),
-        text=[f"🎯 {selected_tune}"],
-        textposition="top center",
-        name="Selected Tune",
-        showlegend=False
-    ))
+    # Shrink only the main point cloud
+    fig.data[0].marker.size = 5
 
-# Display the plot
-st.plotly_chart(fig, use_container_width=True)
+    # Highlight the selected tune
+    selected_row = df[df["name"] == selected_tune]
+    if not selected_row.empty:
+        fig.add_trace(go.Scatter(
+            x=selected_row["x"],
+            y=selected_row["y"],
+            mode="markers+text",
+            marker=dict(size=14, color="black", symbol="x"),
+            text=[f"🎯 {selected_tune}"],
+            textposition="top center",
+            name="Selected Tune",
+            showlegend=False
+        ))
 
+    st.plotly_chart(fig, use_container_width=True)
 
-# ---------- Show Nearest ----------
-# Rename columns for better display
-nearest_df = nearest_df.rename(columns={
-    "tunebooks": "Popularity (tunebooks)",
-    "distance": "Degree of similarity (smaller is more similar)"
-})
-st.subheader("Closest Tunes (same type):")
-st.dataframe(nearest_df.reset_index(drop=True), use_container_width=True)
+    # ---------- Nearest Tunes Table ----------
+    nearest_df = nearest_df.rename(columns={
+        "tunebooks": "Popularity (tunebooks)",
+        "distance": "Degree of similarity (smaller is more similar)"
+    })
+
+    st.subheader("Closest Tunes (same type):")
+    st.dataframe(nearest_df.reset_index(drop=True), use_container_width=True)
 

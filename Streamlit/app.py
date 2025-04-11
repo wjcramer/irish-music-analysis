@@ -90,19 +90,15 @@ for mode in df["mode"].unique():
         hoverinfo="text"
     ))
 
-# ---------- Highlight selected tune ----------
-selected_row = df[df["name"] == selected_tune]
-if not selected_row.empty:
-    fig.add_trace(go.Scatter(
-        x=selected_row["x"],
-        y=selected_row["y"],
-        mode="markers+text",
-        marker=dict(size=14, color="black", symbol="x"),
-        text=[f"🎯 {selected_tune}"],
-        textposition="top center",
-        name="Selected Tune",
-        showlegend=False
-    ))
+fig.add_trace(go.Scatter(
+    x=selected_row["x"],
+    y=selected_row["y"],
+    mode="markers",
+    marker=dict(size=14, color="black", symbol="x"),
+    name=selected_tune,  # adds it to legend
+    showlegend=True,
+    hoverinfo="skip"  # optional: avoid extra tooltip
+))
 
 # ---------- Layout ----------
 fig.update_layout(

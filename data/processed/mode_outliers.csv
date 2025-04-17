@@ -1,0 +1,107 @@
+name,mode,mode_type,cosine_similarity_to_label,best_fit_mode,best_fit_similarity
+"$150 Boot, The",Gmajor,major,0.6330889567299225,dorian,0.816514727474038
+'S Ann An Ìle,Gmajor,major,0.49091770012711605,major,0.49091770012711605
+'S Ann An Ìle,Gmajor,major,0.5625096217841078,major,0.5625096217841078
+'S Iomadh Rud A Chunnaic Mi,Gmajor,major,0.6161473218891433,major,0.6161473218891433
+'S Iomadh Rud A Chunnaic Mi,Dmajor,major,0.5968487334771593,mixolydian,0.6930814439541584
+'S Iomadh Rud A Chunnaic Mi,Amajor,major,0.6109474702432994,major,0.6109474702432994
+'S Iomadh Rud A Chunnaic Mi,Cmajor,major,0.5968487334771593,mixolydian,0.6930814439541584
+'S Iomadh Rud A Chunnaic Mi,Cmajor,major,0.5321175336757086,mixolydian,0.6203574530133062
+'Tis Better To Wear Out Than Rust Out,Gmajor,major,0.6356967331297764,major,0.6356967331297764
+"100th Day, The",Dmixolydian,mixolydian,0.41595210895753415,minor,0.6864313946566222
+101 To Dublin,Gdorian,dorian,0.6199131557225129,minor,0.7485176841200472
+"10k, The",Dmajor,major,0.2666445650967035,minor,0.419872411238161
+10th Bat Crossing Rhine,Dmajor,major,0.5797404444197707,mixolydian,0.7152965686951522
+12 Weeks And A Day,Dmajor,major,0.611399835460193,minor,0.8733157551600836
+128 South,Dmajor,major,0.31070740885562076,minor,0.47459775088556694
+15th Scottish Division,Dmajor,major,0.4751703908741194,mixolydian,0.6176818657265658
+"2 AM Turtle Patrol, The",Emajor,major,0.5580924179149952,mixolydian,0.6858289241165838
+"20,000 Leagues",Adorian,dorian,0.5399541453485992,minor,0.6598575150138318
+23,Gminor,minor,0.4167925498242796,dorian,0.46744636007697726
+29 Pentwin Terrace,Gmajor,major,0.46405409686858856,minor,0.741451769809991
+"30 Year, The",Gmajor,major,0.5362857195073637,dorian,0.6805665036025638
+30th Anniversary,Gmajor,major,0.6431453789615531,dorian,0.8106566504625614
+30th Anniversary,Fmajor,major,0.6431453789615531,dorian,0.8106566504625614
+"3rd Beekeeper, The",Gdorian,dorian,0.6396972151525541,mixolydian,0.7541862350005537
+4 Minutes 33 Seconds,Gdorian,dorian,0.0,major,0.0
+4 Minutes 33 Seconds,Gdorian,dorian,0.0,major,0.0
+4 Minutes 33 Seconds,Edorian,dorian,0.0,major,0.0
+40,Dmajor,major,0.5581291620113367,mixolydian,0.644448446350382
+"51st Highland Division, The",Dmajor,major,0.32749410738552187,minor,0.5027141434463127
+6/8 De Lachine,Dmajor,major,0.5700060125406197,mixolydian,0.6739043207610198
+"72nd Highlanders' Farewell To Aberdeen, The",Cmajor,major,0.5317667727862545,dorian,0.6315555417603798
+"72nd Highlanders' Farewell To Aberdeen, The",Dmajor,major,0.32749410738552187,minor,0.5027141434463127
+9 Years Later,Fmajor,major,0.526571763519037,dorian,0.6842976527936774
+93 Not Out,Dmajor,major,0.4639642488605902,minor,0.7283068740316057
+93 Not Out,Dmajor,major,0.46228005338678246,minor,0.7219318154616559
+"9th Of July, The",Dminor,minor,0.6162210158789975,major,0.8854112665589624
+"A Bottle Of Vodka, Twenty Marlboro Reds And £50 Cashback, Please",Dmajor,major,0.5806798356241492,minor,0.8422808724164839
+"A Bottle Of Vodka, Twenty Marlboro Reds And £50 Cashback, Please",Dmajor,major,0.46146830830652114,minor,0.7204395226223557
+"A Bottle Of Vodka, Twenty Marlboro Reds And £50 Cashback, Please",Dmajor,major,0.6274794727019475,mixolydian,0.6964535897031315
+"A Bottle Of Vodka, Twenty Marlboro Reds And £50 Cashback, Please",Dmajor,major,0.6380376452910588,mixolydian,0.7143128350587322
+A Boy From Home,Gmajor,major,0.6431520319479906,minor,0.853034048436788
+A Bridge Between Lockdowns,Eminor,minor,0.63471741073414,major,0.8527902006076282
+A Bruxa,Fdorian,dorian,0.44362250424654703,mixolydian,0.45816236478404554
+A Bruxa,Eminor,minor,0.322417847367803,mixolydian,0.4534854385194352
+A Chur Nan Gobhar Às A' Chreig,Dmajor,major,0.6116981183145036,mixolydian,0.7127208464726623
+A Chur Nan Gobhar Às A' Chreig,Dmajor,major,0.6292831094769256,mixolydian,0.746079559994956
+A Classical,Amixolydian,mixolydian,0.554231453735051,minor,0.8028120178806664
+A Cup Of Tea,Adorian,dorian,0.545970906862506,mixolydian,0.7247439850573055
+A Daisy In December,Dminor,minor,0.5200090943703278,dorian,0.6382875831687375
+A Dhomhnuill! A Dhomhnuill!,Gmajor,major,0.6220354889314643,dorian,0.7939514716353193
+A Dhomhnuill! A Dhomhnuill!,Gmajor,major,0.6019940107548893,dorian,0.7725066275394536
+A Dhomhnuill! A Dhomhnuill!,Gmajor,major,0.6324030546016735,dorian,0.8093296323581937
+A Dhomhnuill! A Dhomhnuill!,Amajor,major,0.6220354889314643,dorian,0.7939514716353193
+A Fhleasgaich Is Cumaire,Cmajor,major,0.6482340300489456,major,0.6482340300489456
+A Fish Out Of Water,Emixolydian,mixolydian,0.5485742128436628,minor,0.7817098380008709
+A Fisherman's Song For Attracting Seals,Eminor,minor,0.5710678342216269,major,0.7926367757326899
+A Fisherman's Song For Attracting Seals,Eminor,minor,0.6476274290056145,dorian,0.7318972821283312
+A Friend In Need,Dmajor,major,0.5324071081629516,mixolydian,0.6622763881881536
+A Glint Of Silver,Edorian,dorian,0.5641783867934098,minor,0.6870238337181824
+A Glint Of Silver,Edorian,dorian,0.542798376744632,minor,0.6499338833833195
+A Gunne Dubh,Aminor,minor,0.49909829424180996,mixolydian,0.7659479838116763
+A Gunne Dubh,Adorian,dorian,0.6466391986118799,mixolydian,0.7909714950131921
+A Gunne Dubh,Cdorian,dorian,0.6466391986118799,mixolydian,0.7909714950131921
+A Ha'penny For A Cotton Ball,Gmajor,major,0.6476052549380447,dorian,0.8335694803672982
+A Ha'penny For A Cotton Ball,Dmajor,major,0.4027720908455057,minor,0.607853418043363
+A Ha'penny For A Cotton Ball,Dmajor,major,0.37564488866051227,minor,0.5798997732679898
+A Highland Quickstep,Gmajor,major,0.6386562831070679,dorian,0.8135465655688772
+A Highland Quickstep,Gmajor,major,0.5699408967666583,mixolydian,0.7086573415339675
+A Highland Quickstep,Gmajor,major,0.5932873030724823,dorian,0.7998114310218863
+A Lovely Madness,Aminor,minor,0.38544107912388786,minor,0.38544107912388786
+A Lovely Madness,Aminor,minor,0.3486158652880212,minor,0.3486158652880212
+A Lovely Madness,Aminor,minor,0.31283710870774095,minor,0.31283710870774095
+A Man's A Man,Dmixolydian,mixolydian,0.5519165830572148,major,0.6490532660360013
+A Man's A Man,Emixolydian,mixolydian,0.5549749417841846,major,0.6573963108229162
+A Man's A Man,Cdorian,dorian,0.5933847504271433,major,0.6497121096335261
+A Man's A Man,Dmixolydian,mixolydian,0.5523775439606511,major,0.6524848687343834
+A Merry Christmas,Gmajor,major,0.6311976375950978,minor,0.8620010625988284
+A Mhaigdean Bhan Uasal,Gmajor,major,0.6270398661394819,minor,0.8913085821383778
+A Nation Once Again,Dmajor,major,0.5876747486593306,minor,0.8446410731429037
+A Nation Once Again,Dmajor,major,0.5783082729640432,minor,0.8370543783456539
+A Nation Once Again,Dmajor,major,0.5574037412898338,minor,0.8219106907604579
+A Night At The Fair,Gmajor,major,0.6254367218768866,minor,0.8634830102974951
+A Night At The Fair,Gmajor,major,0.6154024779109923,minor,0.8467835662602141
+A Night At The Fair,Gmajor,major,0.6331405539235186,minor,0.860079538862797
+A Night At The Fair,Gmajor,major,0.591504605653759,minor,0.8377642600770872
+A Night At The Fair,Gmajor,major,0.6034108774663685,minor,0.8412072429462248
+A Night At The Fair,Gmajor,major,0.5598499204647307,minor,0.8068206516735827
+A Night At The Fair,Gmajor,major,0.635565145304832,minor,0.8585759399375533
+A Night In Garden Of Eden,Dminor,minor,0.5680969616956629,dorian,0.6668481676076552
+A Peep Behind The Curtain,Dmajor,major,0.551610653280272,mixolydian,0.7013173059225848
+A Pound A Week Rise,Fdorian,dorian,0.22382642337563685,major,0.2783943260332623
+A Redl,Ddorian,dorian,0.48215160990467654,mixolydian,0.5375505677365149
+A Seed In The Rubble,Dmajor,major,0.4009745295778596,minor,0.5926693760396522
+A Short Journey,Bminor,minor,0.5190624553468596,mixolydian,0.8208986858011071
+A Short Journey,Bminor,minor,0.5292383953735016,mixolydian,0.780458551983086
+A Sligo Air,Amajor,major,0.6360325910116738,major,0.6360325910116738
+A Sligo Air,Gmajor,major,0.6360325910116738,major,0.6360325910116738
+A Sligo Air,Gmajor,major,0.6486988699135303,major,0.6486988699135303
+A Slip Of A Thing,Fmajor,major,0.0,major,0.0
+A Smile In The Dark,Gmajor,major,0.6302224548657019,minor,0.8819890473016583
+A Special Day,Amajor,major,0.60313611583236,minor,0.8700425121401542
+A Stor Mo Chroi,Eminor,minor,0.544012442463906,minor,0.544012442463906
+A Trip To Bavaria,Cmajor,major,0.44447381540799114,mixolydian,0.5387534031933133
+A Trip To Bavaria,Dmajor,major,0.44447381540799114,mixolydian,0.5387534031933133
+A Trip To Galloway,Dmajor,major,0.45615180606549033,minor,0.7039340792307007
+A Trip To The Cottage,Gmajor,major,0.6407534520745105,major,0.6407534520745105

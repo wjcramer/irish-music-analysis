@@ -3,7 +3,7 @@
 This project analyzes the structure and modal properties of traditional Irish tunes using data from [TheSession.org](https://thesession.org). It scrapes tune metadata and ABC notation to study patterns in tune types, meters, keys, and modes.
 
 ## Features
-- Scrapes tune metadata and ABC from TheSession.org
+- Links to the repository of tune data in ABC format from TheSession.org at https://github.com/adactio/TheSession-data
 - Parses tunes using `music21`
 - Analyzes modes and structural patterns
 
